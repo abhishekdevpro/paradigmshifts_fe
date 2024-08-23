@@ -2,7 +2,7 @@ import React from 'react';
 import AEX from './img/AEX.jpg';
 import PayPal from './img/paypal.jpg';
 import HUI from './img/HUI.jpg';
-import Dream11 from './img/dream11.jpg';
+import Dream11 from './img/Dream11.jpg';
 import PhonePE from './img/PHonePE.jpg';
 import IB from './img/IB.jpg';
 import HDFC from './img/HDFC.jpg';
