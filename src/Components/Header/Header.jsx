@@ -1,14 +1,33 @@
 import React, { useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faBars, faHeart } from '@fortawesome/free-solid-svg-icons';
-import logo from "./logo.webp"
+import { faBars, faChevronDown, faHeart } from '@fortawesome/free-solid-svg-icons';
+import logo from "./logo.webp";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [activeDropdown, setActiveDropdown] = useState(null);
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
   };
+
+  const handleDropdownHover = (dropdownName) => {
+    setActiveDropdown(dropdownName);
+  };
+
+  const handleDropdownLeave = () => {
+    setActiveDropdown(null);
+  };
+
+  const navItems = [
+    {
+      name: 'Solutions',
+      dropdownItems: ['Banking', 'ECom & Payments', 'Capital Markets & Wealth', 'Communities', 'Insurance', 'Gaming', 'Fintech', 'HR & Recruitment']
+    },
+    { name: 'Industries', dropdownItems: ['Finance', 'Healthcare', 'Technology', 'Education'] },
+    { name: 'About Us', dropdownItems: ['Our Story', 'Team', 'Careers'] },
+    { name: 'Resources', dropdownItems: ['Blog', 'Whitepapers', 'Case Studies'] },
+  ];
 
   return (
     <header className="bg-white shadow-md">
@@ -18,41 +37,79 @@ const Header = () => {
             <img src={logo} alt="Paradigm Shift Logo" className="h-10 w-auto" />
             <h1 className="ml-2 text-xl font-bold text-blue-900">Paradigm Shift</h1>
           </div>
-
-          <nav className="hidden md:flex space-x-6">
-            <a href="#" className="text-gray-600 hover:text-blue-900">Home</a>
-            <a href="#" className="text-gray-600 hover:text-blue-900">About</a>
-            <a href="#" className="text-gray-600 hover:text-blue-900">Process</a>
-            <a href="#" className="text-gray-600 hover:text-blue-900">Contact</a>
+          <nav className="hidden md:flex space-x-6 md:gap-4 font-bold">
+            {navItems.map((item) => (
+              <div
+                key={item.name}
+                className="relative"
+                onMouseEnter={() => handleDropdownHover(item.name)}
+                onMouseLeave={handleDropdownLeave}
+              >
+                <a href="#" className="text-gray-600 hover:text-blue-900 flex items-center">
+                  {item.name}
+                  <FontAwesomeIcon icon={faChevronDown} className="ml-1 text-xs" />
+                </a>
+                {activeDropdown === item.name && (
+                  <div className="absolute left-0 mt-2 w-48 bg-white border border-gray-200 rounded shadow-lg z-10">
+                    {item.dropdownItems.map((dropdownItem) => (
+                      <a
+                        key={dropdownItem}
+                        href="#"
+                        className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+                      >
+                        {dropdownItem}
+                      </a>
+                    ))}
+                  </div>
+                )}
+              </div>
+            ))}
           </nav>
-
           <div className="hidden md:flex items-center space-x-4">
-            <button className="bg-teal-600 text-white px-4 py-2 rounded hover:bg-teal-700 transition duration-300">
+            <button className="bg-teal-600 text-white px-4 py-2 rounded-full hover:bg-teal-700 transition duration-300 shadow-lg">
+              LOGIN
+            </button>
+            <button className="bg-red-500 text-white px-4 py-2 rounded-full hover:bg-red-600 transition duration-300 shadow-lg">
+              CONTACT US
+            </button>
+            <button className="bg-teal-600 text-white px-4 py-2 rounded-full hover:bg-teal-700 transition duration-300 flex items-center shadow-lg">
+              <FontAwesomeIcon icon={faHeart} className="mr-2" />
               JOIN COURSE
             </button>
-            <button className="text-red-500 hover:text-red-600">
-              <FontAwesomeIcon icon={faHeart} size="lg" />
-            </button>
           </div>
-
           <button className="md:hidden text-gray-600" onClick={toggleMenu}>
             <FontAwesomeIcon icon={faBars} size="lg" />
           </button>
         </div>
       </div>
-
       {/* Mobile menu */}
       <div className={`md:hidden ${isMenuOpen ? 'block' : 'hidden'}`}>
         <nav className="px-4 pt-2 pb-4 space-y-2">
-          <a href="#" className="block text-gray-600 hover:text-blue-900">Home</a>
-          <a href="#" className="block text-gray-600 hover:text-blue-900">About</a>
-          <a href="#" className="block text-gray-600 hover:text-blue-900">Process</a>
-          <a href="#" className="block text-gray-600 hover:text-blue-900">Contact</a>
-          <button className="w-full bg-teal-600 text-white px-4 py-2 rounded hover:bg-teal-700 transition duration-300 mt-2">
+          {navItems.map((item) => (
+            <div key={item.name}>
+              <a href="#" className="block text-gray-600 hover:text-blue-900">{item.name}</a>
+              <div className="pl-4 mt-1 space-y-1">
+                {item.dropdownItems.map((dropdownItem) => (
+                  <a
+                    key={dropdownItem}
+                    href="#"
+                    className="block text-sm text-gray-500 hover:text-blue-900"
+                  >
+                    {dropdownItem}
+                  </a>
+                ))}
+              </div>
+            </div>
+          ))}
+          <button className="w-full bg-teal-600 text-white px-4 py-2 rounded-full hover:bg-teal-700 transition duration-300 mt-2 flex items-center shadow-lg">
+            <FontAwesomeIcon icon={faHeart} className="mr-2" />
             JOIN COURSE
           </button>
-          <button className="w-full text-red-500 hover:text-red-600 mt-2">
-            <FontAwesomeIcon icon={faHeart} size="lg" />
+          <button className="w-full bg-red-500 text-white px-4 py-2 rounded-full hover:bg-red-600 transition duration-300 mt-2 shadow-lg">
+            CONTACT US
+          </button>
+          <button className="w-full bg-teal-600 text-white px-4 py-2 rounded-full hover:bg-teal-700 transition duration-300 mt-2 shadow-lg">
+            LOGIN
           </button>
         </nav>
       </div>

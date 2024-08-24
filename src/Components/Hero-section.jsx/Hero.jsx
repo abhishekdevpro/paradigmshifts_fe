@@ -25,24 +25,24 @@ const HeroSection = () => {
         <h2 className="text-3xl sm:text-5xl md:text-7xl lg:text-8xl font-bold">
           Prevent Doubt,<br />Foster Trust
         </h2>
-        <p className="mt-4 text-lg sm:text-xl md:text-2xl">
+        <p className="mt-4 text-lg sm:text-xl md:text-2xl font-semibold">
           USA’s leading drug testing & Rehab Company
         </p>
       </div>
 
       {/* Bottom Section */}
-      <div className="absolute bottom-0 left-0 w-full bg-black/60 py-2 px-4 text-xs sm:text-sm md:text-base text-center text-white font-medium shadow-md flex flex-wrap justify-center items-center space-x-2">
-        <span>KYC</span>
+      <div className="absolute bottom-0 left-0 w-full bg-black/60 py-2 px-4 text-5xl sm:text-sm md:text-base text-center text-white font-bold shadow-md flex flex-wrap justify-center items-center space-x-2">
+        <span className='text-2xl'>KYC</span>
         <span className="text-red-500">●</span>
-        <span>Drug Test</span>
+        <span className='text-2xl'>Drug Test</span>
         <span className="text-red-500">●</span>
-        <span>Digital Documentations</span>
+        <span className='text-2xl'>Digital Documentations</span>
         <span className="text-red-500">●</span>
-        <span>Privacy & Consent</span>
+        <span className='text-2xl'>Privacy & Consent</span>
         <span className="text-red-500">●</span>
-        <span>AI Enabled Solutions</span>
+        <span className='text-2xl'>AI Enabled Solutions</span>
         <span className="text-red-500">●</span>
-        <span>Rehab Sessions</span>
+        <span className='text-2xl'>Rehab Sessions</span>
       </div>
     </div>
   );
