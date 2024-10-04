@@ -1,5 +1,4 @@
 // HeroSection.js
-import React from 'react';
 import bannerVideo2 from '../Header/baner-video2.mp4';
 
 const HeroSection = () => {
@@ -32,7 +31,7 @@ const HeroSection = () => {
 
       {/* Bottom Section */}
       <div className="absolute bottom-0 left-0 w-full bg-black/60 py-2 px-4 text-5xl sm:text-sm md:text-base text-center text-white font-bold shadow-md flex flex-wrap justify-center items-center space-x-2">
-        <span className='text-2xl'>KYC</span>
+        {/* <span className='text-2xl'>KYC</span> */}
         <span className="text-red-500">●</span>
         <span className='text-2xl'>Drug Test</span>
         <span className="text-red-500">●</span>
