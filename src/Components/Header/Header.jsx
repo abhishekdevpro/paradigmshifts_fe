@@ -159,7 +159,7 @@ const Header = () => {
             <a
               key={item.name}
               href="#"
-              className="text-gray-700 hover:text-teal-600 font-medium"
+              className="text-gray-700 hover:text-teal-600 font-medium text-lg"
             >
               {item.name}
             </a>
@@ -190,7 +190,7 @@ const Header = () => {
             <a
               key={item.name}
               href="#"
-              className="block text-gray-700 hover:text-teal-600 font-medium"
+              className="block  text-gray-700 hover:text-teal-600 font-medium"
             >
               {item.name}
             </a>

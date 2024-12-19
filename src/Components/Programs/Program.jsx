@@ -80,15 +80,13 @@ const PartnershipsAndPrograms = () => {
       <div className="max-w-6xl mx-auto">
         {/* Header Section */}
         <div className="text-center mb-8">
-          <h2 className="text-xl text-gray-600 mb-2">PARADIGM SHIFT</h2>
-          <h1 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4">
+          <h2 className="text-3xl font-bold text-gray-600 mb-2">PARADIGM SHIFT</h2>
+          <h1 className="text-xl md:text-4xl font-bold text-gray-800 mb-4">
             Partnerships and Programs
           </h1>
-          <p className="text-gray-600 max-w-3xl mx-auto text-sm md:text-base">
-            Paradigm Shift is seeking collaborations with individuals and organizations interested in 
-            supporting our advanced programs. We welcome sponsors for our initiatives and training facilities, 
-            with contributions being duly recognized. For more information on sponsorships and our 
-            comprehensive support programs, please reach out to us.
+          <p className="text-gray-600 max-w-3xl mx-auto text-sm font-medium md:text-base">
+          Paradigm Shift is dedicated to creating positive change within the community. Our focus is on offering impactful programs that help individuals overcome challenges, grow, and thrive. We believe in providing the necessary support and resources to empower people, fostering a stronger and more resilient community. Our work is driven by a deep commitment to service, and we strive to make a lasting difference in the lives of those we serve.
+
           </p>
         </div>
 
@@ -107,7 +105,7 @@ const PartnershipsAndPrograms = () => {
                   <h3 className="text-lg font-semibold text-gray-800">
                     {program.title}
                   </h3>
-                  <p className="text-gray-600 text-sm">
+                  <p className="text-gray-600 text-md font-medium">
                     {program.description}
                   </p>
                 </div>
