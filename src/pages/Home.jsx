@@ -6,6 +6,7 @@ import Footer from '../Components/Footer/Footer'
 import HeroSection from '../Components/Hero-section.jsx/Hero'
 import PartnershipsAndPrograms from '../Components/Programs/Program'
 import ProgramSlider from '../Components/Slider/Slider'
+import ProjectCards from '../Components/Projects/ProjectCard'
 
 
 function Home() {
@@ -14,8 +15,9 @@ function Home() {
      <Header/>
      <HeroSection/>
      <PartnershipsAndPrograms/>
-     <ProgramSlider/>
-     <AwardsAndCertificates />
+     <ProjectCards />
+     {/* <ProgramSlider/> */}
+     {/* <AwardsAndCertificates /> */}
      <GlobalPartners />
      <Footer />
    </>

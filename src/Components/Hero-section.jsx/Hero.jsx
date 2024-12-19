@@ -1,9 +1,9 @@
-// HeroSection.js
+// // HeroSection.js
 import bannerVideo2 from '../Header/baner-video2.mp4';
 
 const HeroSection = () => {
   return (
-    <div className="relative h-screen">
+    <div className="relative min-h-screen w-full overflow-hidden">
       {/* Video Background */}
       <div className="absolute inset-0 z-0">
         <video
@@ -16,32 +16,58 @@ const HeroSection = () => {
         >
           <source src={bannerVideo2} type="video/mp4" />
         </video>
-        <div className="absolute top-0 left-0 w-full h-full bg-black opacity-50"></div>
+        {/* Overlay with better gradient */}
+        <div className="absolute inset-0 bg-black/60 backdrop-blur-sm"></div>
       </div>
 
-      {/* Text Overlay */}
-      <div className="absolute top-1/2 left-4 transform -translate-y-1/2 text-left text-white">
-        <h2 className="text-3xl sm:text-5xl md:text-7xl lg:text-8xl font-bold">
-          Prevent Doubt,<br />Foster Trust
-        </h2>
-        <p className="mt-4 text-lg sm:text-xl md:text-2xl font-semibold">
-          USA’s leading drug testing & Rehab Company
-        </p>
-      </div>
+      {/* Main Content */}
+      <div className="relative z-10 flex flex-col items-center justify-center min-h-screen px-4 sm:px-6 lg:px-8">
+        {/* Hero Text */}
+        <div className="text-center space-y-6">
+          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold text-white tracking-tight">
+            Hello, I&apos;m Aria,
+          </h1>
+          
+          <p className="text-xl sm:text-2xl md:text-3xl text-white/90 font-semibold">
+            Your Personal Career Advisor!
+          </p>
 
-      {/* Bottom Section */}
-      <div className="absolute bottom-0 left-0 w-full bg-black/60 py-2 px-4 text-5xl sm:text-sm md:text-base text-center text-white font-bold shadow-md flex flex-wrap justify-center items-center space-x-2">
-        {/* <span className='text-2xl'>KYC</span> */}
-        <span className="text-red-500">●</span>
-        <span className='text-2xl'>Drug Test</span>
-        <span className="text-red-500">●</span>
-        <span className='text-2xl'>Digital Documentations</span>
-        <span className="text-red-500">●</span>
-        <span className='text-2xl'>Privacy & Consent</span>
-        <span className="text-red-500">●</span>
-        <span className='text-2xl'>AI Enabled Solutions</span>
-        <span className="text-red-500">●</span>
-        <span className='text-2xl'>Rehab Sessions</span>
+          {/* Buttons */}
+          <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 mt-8 justify-center">
+            <button className="px-8 py-3 bg-blue-600 hover:bg-blue-700 text-white rounded-full text-lg sm:text-xl font-semibold transition-colors duration-200 shadow-lg hover:shadow-xl">
+              Employee
+            </button>
+            <button className="px-8 py-3 bg-blue-600 hover:bg-blue-700 text-white rounded-full text-lg sm:text-xl font-semibold transition-colors duration-200 shadow-lg hover:shadow-xl">
+              Company HR
+            </button>
+          </div>
+        </div>
+
+        {/* Bottom Features */}
+        <div className="absolute bottom-8 left-0 right-0 px-4">
+          <div className="max-w-4xl mx-auto">
+            <div className="flex flex-col sm:flex-row justify-center items-center gap-4 sm:gap-6 text-white">
+              <div className="flex items-center gap-2">
+                <span className="w-2 h-2 rounded-full bg-red-500"></span>
+                <span className="text-sm sm:text-base font-medium">Drug and Alcohol</span>
+              </div>
+              
+              <div className="hidden sm:block w-1 h-1 rounded-full bg-white/30"></div>
+              
+              <div className="flex items-center gap-2">
+                <span className="w-2 h-2 rounded-full bg-red-500"></span>
+                <span className="text-sm sm:text-base font-medium">Rehabilitation and Retention</span>
+              </div>
+              
+              <div className="hidden sm:block w-1 h-1 rounded-full bg-white/30"></div>
+              
+              <div className="flex items-center gap-2">
+                <span className="w-2 h-2 rounded-full bg-red-500"></span>
+                <span className="text-sm sm:text-base font-medium">Monitoring</span>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   );
