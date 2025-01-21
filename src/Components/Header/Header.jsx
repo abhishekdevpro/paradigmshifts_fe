@@ -140,8 +140,8 @@ const Header = () => {
   };
 
   const navItems = [
-    { name: "About" },
-    { name: "Partner with Us" },
+    { name: "About", href: "/aboutus" },
+    { name: "Partner with Us", href: "#" },
   ];
 
   return (
@@ -150,7 +150,9 @@ const Header = () => {
         {/* Logo */}
         <div className="flex items-center">
           <img src={logo} alt="Paradigm Shift Logo" className="h-8 w-auto" />
-          <h1 className="ml-2 text-lg font-bold text-gray-800">Paradigm Shift</h1>
+          <h1 className="ml-2 text-lg font-bold text-gray-800">
+            Paradigm Shift
+          </h1>
         </div>
 
         {/* Desktop Navigation */}
@@ -158,7 +160,7 @@ const Header = () => {
           {navItems.map((item) => (
             <a
               key={item.name}
-              href="#"
+              href={item.href}
               className="text-gray-700 hover:text-teal-600 font-medium text-lg"
             >
               {item.name}
@@ -183,7 +185,9 @@ const Header = () => {
 
       {/* Mobile Menu */}
       <div
-        className={`md:hidden ${isMenuOpen ? "block" : "hidden"} bg-white shadow-md`}
+        className={`md:hidden ${
+          isMenuOpen ? "block" : "hidden"
+        } bg-white shadow-md`}
       >
         <nav className="px-4 py-4 space-y-4">
           {navItems.map((item) => (
