@@ -48,7 +48,7 @@ function Novajobsus({ novaJobsusData }) {
                 <Carousel.Item key={index}>
                   <img
                     className="d-block w-100"
-                    src={`https://api.novajobs.us${image}`}
+                    src={`https://apiwl.novajobs.us${image}`}
                     alt={`Slide ${index + 1}`}
                   />
                 </Carousel.Item>
