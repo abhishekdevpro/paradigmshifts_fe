@@ -50,7 +50,7 @@ function MoreServices({ moreServicesData }) {
             </div>
             <div className="mx-3 mx-lg-5">
               <img
-                src={`https://api.novajobs.us${imgData[0]}`}
+                src={`https://apiwl.novajobs.us${imgData[0]}`}
                 alt="Uploaded Image"
                 style={{ height: "350px", width: "350px" }}
               />

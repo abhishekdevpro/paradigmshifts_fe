@@ -28,7 +28,7 @@ function ForJobseeker({ forJobseekerData }) {
             ></div>
             <div className="mx-3 mx-lg-5 d-flex justify-content-center">
               <img
-                src={`https://api.novajobs.us${imgData[0]}`}
+                src={`https://apiwl.novajobs.us${imgData[0]}`}
                 alt="Uploaded Image"
                 style={{ height: "400px", width: "800px" }}
               />
