@@ -26,7 +26,9 @@ const Footer = () => {
               </div>
               <span className="text-2xl font-bold">Paradigm Shift</span>
             </div>
-            <p className="text-sm mb-4">Drug, Monitoring Rehab and Retention</p>
+            <p className="text-sm mb-4 text-white">
+              Drug, Monitoring Rehab and Retention
+            </p>
             <div className="flex space-x-2">
               <img src={logo2} alt="SBE" className="w-24 h-14" />
             </div>
@@ -62,7 +64,7 @@ const Footer = () => {
           {/* Address */}
           <div className="w-full md:w-1/4 mb-6 md:mb-0">
             <h3 className="text-xl font-medium mb-4">Address</h3>
-            <p className="text-sm">
+            <p className="text-sm text-gray-100">
               1509 Lady St,
               <br />
               Columbia SC, 29201,
@@ -99,8 +101,8 @@ const Footer = () => {
 
         {/* Copyright and Social Icons */}
         <div className="mt-8 pt-8 border-t border-teal-800 flex flex-wrap justify-between items-center">
-          <p className="text-sm mb-4 md:mb-0">
-            © 2024 Copyrights by Hyper V Solutions. All Rights Reserved
+          <p className="text-sm mb-4 md:mb-0 text-white">
+            © 2025 Copyrights by Hyper V Solutions. All Rights Reserved
           </p>
           <div className="flex space-x-4">
             <a
